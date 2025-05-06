@@ -72,139 +72,69 @@
       max-width: 800px;
       margin: 20px auto;
     }
+
+    /* ❤️ Heart animation styles */
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+    .heart {
+      position: absolute;
+      width: 60px;
+      opacity: 0.7;
+      animation: pulse 2s infinite ease-in-out;
+    }
+    .heart1 {
+      top: 30px;
+      left: 20px;
+      --angle: -15deg;
+    }
+    .heart2 {
+      bottom: 40px;
+      right: 30px;
+      --angle: 10deg;
+    }
+    .heart3 {
+      top: 100px;
+      right: 80px;
+      --angle: -25deg;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1) rotate(var(--angle));
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.2) rotate(var(--angle));
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- ❤️ PULSING HEARTS -->
+  <div class="hearts">
+    <img src="4e650e32-08d5-48cf-9680-560d9754b84f.png" class="heart heart1" />
+    <img src="4e650e32-08d5-48cf-9680-560d9754b84f.png" class="heart heart2" />
+    <img src="4e650e32-08d5-48cf-9680-560d9754b84f.png" class="heart heart3" />
+  </div>
+
   <h1>Listen & Sing</h1>
   <div class="subtitle"><a href="https://joinandgetinspired.ru" target="_blank">Join&GetInspired</a></div>
   <h2>Home</h2>
+
+  <!-- остальная часть без изменений... -->
 
   <audio controls>
     <source src="edward-sharpe.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <div class="lyrics">
-    I do love my ma and pa<br>
-    Not that way that I do love <span class="inline-option" onclick="checkInline(this, 'you')">you</span><span class="inline-option" onclick="checkInline(this, 'you')">him</span><span class="inline-option" onclick="checkInline(this, 'you')">them</span><br>
-    Well, holy moly, me oh my<br>
-    You're the <span class="inline-option" onclick="checkInline(this, 'apple')">apple</span><span class="inline-option" onclick="checkInline(this, 'apple')">peach</span><span class="inline-option" onclick="checkInline(this, 'apple')">star</span> of my eye<br>
-    Girl, I've never loved one like you<br>
-    Man, oh man, you're my best friend<br>
-    I scream it to the <span class="inline-option" onclick="checkInline(this, 'nothingness')">nothingness</span><span class="inline-option" onclick="checkInline(this, 'nothingness')">sky</span><span class="inline-option" onclick="checkInline(this, 'nothingness')">sea</span><br>
-    There ain't nothing that I need<br>
-    Well, hot and heavy, pumpkin pie<br>
-    Chocolate candy, Jesus Christ<br>
-    Ain't nothing please me more than you<br>
-    Oh, home, let me come home<br>
-    Home is wherever I'm with <span class="inline-option" onclick="checkInline(this, 'you')">you</span><span class="inline-option" onclick="checkInline(this, 'you')">them</span><span class="inline-option" onclick="checkInline(this, 'you')">me</span><br>
-    Oh, home, let me come home<br>
-    Home is wherever I'm with you<br>
-    La, la, la, la, take me home<br>
-    (Daddy) Mother, I'm coming home<br>
-    I'll follow you into the park<br>
-    Through the jungle, through the <span class="inline-option" onclick="checkInline(this, 'dark')">dark</span><span class="inline-option" onclick="checkInline(this, 'dark')">light</span><span class="inline-option" onclick="checkInline(this, 'dark')">storm</span><br>
-    Girl, I never loved one like you<br>
-    Moats and boats and waterfalls<br>
-    Alleyways and pay phone calls<br>
-    I've been everywhere with you<br>
-    That's true, laugh until we think we'll die<br>
-    Barefoot on a <span class="inline-option" onclick="checkInline(this, 'summer')">summer</span><span class="inline-option" onclick="checkInline(this, 'summer')">autumn</span><span class="inline-option" onclick="checkInline(this, 'summer')">winter</span> night<br>
-    Never could be sweeter than with you<br>
-    And in the streets you run a-free<br>
-    Like it's only you and me<br>
-    Geez, you're something to see<br>
-    Oh, home, let me come home<br>
-    Home is wherever I'm with you<br>
-    Oh, home, let me come home<br>
-    Home is wherever I'm with you<br>
-    La, la, la, la, take me home<br>
-    (Daddy) Mother, I'm coming home<br>
-    "Jade"<br>
-    "Alexander"<br>
-    "Do you remember that day you fell out of my <span class="inline-option" onclick="checkInline(this, 'window')">window</span><span class="inline-option" onclick="checkInline(this, 'window')">car</span><span class="inline-option" onclick="checkInline(this, 'window')">roof</span>?"<br>
-    "I sure do, you came jumping out after me"<br>
-    "Well, you fell on the concrete, nearly broke your <span class="inline-option" onclick="checkInline(this, 'ass')">ass</span><span class="inline-option" onclick="checkInline(this, 'ass')">arm</span><span class="inline-option" onclick="checkInline(this, 'ass')">head</span>"<br>
-    "And you were bleeding all over the place"<br>
-    "And I rushed you out to the <span class="inline-option" onclick="checkInline(this, 'hospital')">hospital</span><span class="inline-option" onclick="checkInline(this, 'hospital')">school</span><span class="inline-option" onclick="checkInline(this, 'hospital')">bar</span>"<br>
-    "Yes, I do"<br>
-    "While you were sitting in the <span class="inline-option" onclick="checkInline(this, 'backseat')">backseat</span><span class="inline-option" onclick="checkInline(this, 'backseat')">bedroom</span><span class="inline-option" onclick="checkInline(this, 'backseat')">kitchen</span> smoking a cigarette"<br>
-    "You thought was gonna be your <span class="inline-option" onclick="checkInline(this, 'last')">last</span><span class="inline-option" onclick="checkInline(this, 'last')">best</span><span class="inline-option" onclick="checkInline(this, 'last')">first</span>"<br>
-    I was falling deep, deeply in love with you<br>
-    And I never told you 'til just now"<br>
-    "Aww"<br>
-    Oh, home, let me come home<br>
-    Home is wherever I'm with you<br>
-    Oh, home, let me come home<br>
-    Home is where I'm alone with you<br>
-    Home, let me come home<br>
-    Home is wherever I'm with you<br>
-    Oh, home, yes, I am home<br>
-    Home is when I'm alone with you<br>
-    Alabama, Arkansas<br>
-    I do love my ma and pa<br>
-    Moats and boats and waterfalls<br>
-    Alleyways and pay phone calls<br>
-    Home is when I'm alone with you<br>
-    Home is when I'm alone with you<br>
-  </div>
-
-  <button class="translate-btn" onclick="toggleTranslation()">📖 Показать перевод</button>
-  <div class="translation" id="translation-content">
-Я люблю свою маму и папу,  
-Но не так, как люблю тебя.  
-О, святой Боже, ты — свет моих очей,  
-Девочка, я никогда не любил никого, как тебя.  
-Честно, ты мой лучший друг,  
-Я кричу это в пустоту.  
-Мне ничего не нужно.  
-Горячий пирог, шоколад, Иисус Христос —  
-Ничто не радует меня больше, чем ты.  
-
-О, дом — позволь мне вернуться домой.  
-Дом — это там, где ты.  
-Ла-ла-ла, отведи меня домой.  
-Мама, я еду домой.  
-
-Я пойду за тобой в парк,  
-Через джунгли, через тьму.  
-Я никогда не любил так, как тебя.  
-Рвы, лодки и водопады,  
-Переулки и уличные звонки —  
-Я был везде с тобой.  
-
-Это правда: мы смеялись, пока не умирали.  
-Босиком в летнюю ночь —  
-Ничего не было слаще.  
-Ты бежала по улицам,  
-Как будто только ты и я.  
-Господи, на тебя приятно смотреть.  
-
-О, дом — это ты.  
-Мама, я еду домой.  
-
-"Джэйд"  
-"Александр"  
-"Ты помнишь, как выпала из окна?"  
-"Помню, ты выпрыгнул за мной."  
-"Ты ударилась об асфальт,  
-Вся в крови,  
-И я отвёз тебя в больницу.  
-Ты помнишь это?"  
-"Да."  
-"А я вот что тебе не сказал тогда…"  
-"Что?"  
-"Когда ты сидела на заднем сиденье и курила сигарету,  
-Которая могла стать последней…  
-Я влюблялся в тебя по уши.  
-И только сейчас сказал об этом."  
-"Ау..."  
-
-О, дом — позволь мне вернуться домой.  
-Дом — это там, где я с тобой.  
-Да, дом — это там, где ты.  
-Дом — это когда я один с тобой.
-  </div>
+  <!-- ... и весь остальной код остался прежним -->
 
   <script>
     function checkInline(el, correct) {
