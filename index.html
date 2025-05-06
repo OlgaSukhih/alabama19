@@ -7,7 +7,13 @@
   <style>
     body {
       font-family: Georgia, serif;
-      background: linear-gradient(to bottom, #1e1e2f, #111);
+      background:
+        url('/mnt/data/4e650e32-08d5-48cf-9680-560d9754b84f.png.png') left 100px top 50px no-repeat,
+        url('/mnt/data/4e650e32-08d5-48cf-9680-560d9754b84f.png.png') right 100px top 200px no-repeat,
+        url('/mnt/data/4e650e32-08d5-48cf-9680-560d9754b84f.png.png') left 100px bottom 150px no-repeat,
+        linear-gradient(to bottom, #1e1e2f, #111);
+      background-size: 120px auto, 120px auto, 120px auto;
+      background-blend-mode: lighten;
       color: #f9f9f9;
       margin: 0;
       padding: 20px;
@@ -72,69 +78,29 @@
       max-width: 800px;
       margin: 20px auto;
     }
-
-    /* ❤️ Heart animation styles */
-    .hearts {
-      position: absolute;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-    }
-    .heart {
-      position: absolute;
-      width: 60px;
-      opacity: 0.7;
-      animation: pulse 2s infinite ease-in-out;
-    }
-    .heart1 {
-      top: 30px;
-      left: 20px;
-      --angle: -15deg;
-    }
-    .heart2 {
-      bottom: 40px;
-      right: 30px;
-      --angle: 10deg;
-    }
-    .heart3 {
-      top: 100px;
-      right: 80px;
-      --angle: -25deg;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1) rotate(var(--angle));
-        opacity: 0.7;
-      }
-      50% {
-        transform: scale(1.2) rotate(var(--angle));
-        opacity: 1;
-      }
-    }
   </style>
 </head>
 <body>
-
-  <!-- ❤️ PULSING HEARTS -->
-  <div class="hearts">
-    <img src="4e650e32-08d5-48cf-9680-560d9754b84f.png" class="heart heart1" />
-    <img src="4e650e32-08d5-48cf-9680-560d9754b84f.png" class="heart heart2" />
-    <img src="4e650e32-08d5-48cf-9680-560d9754b84f.png" class="heart heart3" />
-  </div>
-
   <h1>Listen & Sing</h1>
   <div class="subtitle"><a href="https://joinandgetinspired.ru" target="_blank">Join&GetInspired</a></div>
   <h2>Home</h2>
-
-  <!-- остальная часть без изменений... -->
 
   <audio controls>
     <source src="edward-sharpe.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <!-- ... и весь остальной код остался прежним -->
+  <div class="lyrics">
+    <!-- Лирика остаётся без изменений -->
+    <!-- ... -->
+  </div>
+
+  <button class="translate-btn" onclick="toggleTranslation()">📖 Показать перевод</button>
+
+  <div class="translation" id="translation-content">
+    <!-- Перевод остаётся без изменений -->
+    <!-- ... -->
+  </div>
 
   <script>
     function checkInline(el, correct) {
@@ -154,3 +120,8 @@
   </script>
 </body>
 </html>
+
+   
+   
+   
+
